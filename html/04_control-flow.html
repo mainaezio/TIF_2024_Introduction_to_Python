@@ -7963,6 +7963,49 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Costruiamo un esempio per mostrare la sequenza di operazioni in loop concatenati.
+In ciascun passo facciamo stampare i valori degli indici nei loop e il risultato.
+Per ogni valore dell'indice esterno <code>i</code>, si calcola il risultato per ciascun valore dell'indice interno <code>j</code></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'index i:'</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'index j:'</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">i</span> <span class="o">+</span><span class="n">j</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'10*i + j:'</span><span class="p">,</span><span class="n">res</span><span class="p">,</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Provate a scambiare i due loop.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="width:95%; padding:5px 10px 5px; border-style:solid; border-width:0px 0px 0px 10px; border-color:#b8d0d0; margin:20px 0px 10px 10px">
 <h4> Imparare Facendo</h4>
 <ol>
@@ -8489,7 +8532,7 @@ Esempi:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Riassunto-Notebook---Sezione-4:-Control-Flow">Riassunto Notebook - Sezione 4: Control Flow<a class="anchor-link" href="#Riassunto-Notebook---Sezione-4:-Control-Flow">¶</a></h1><h2 id="Obiettivi">Obiettivi<a class="anchor-link" href="#Obiettivi">¶</a></h2><ul>
+<h1 id="Sommario-4:-Control-Flow">Sommario 4: Control Flow<a class="anchor-link" href="#Sommario-4:-Control-Flow">¶</a></h1><h2 id="Obiettivi">Obiettivi<a class="anchor-link" href="#Obiettivi">¶</a></h2><ul>
 <li>Imparare a prendere decisioni nei programmi usando le dichiarazioni <code>if-then-else</code>.</li>
 <li>Operare su sequenze usando i cicli <code>for</code> e <code>while</code>.</li>
 <li>Interrompere i loop con <code>break</code> e <code>continue</code>.</li>
@@ -8497,7 +8540,7 @@ Esempi:
 </ul>
 <h2 id="4.1-If-then-else">4.1 If-then-else<a class="anchor-link" href="#4.1-If-then-else">¶</a></h2><ul>
 <li><strong>Uso di <code>if</code></strong>: Esegue il codice solo se la condizione è vera.</li>
-<li><strong>Uso di <code>else</code></strong>: Esegue il codice quando la condizione dell'<code>if</code> è falsa.</li>
+<li><strong>Uso di <code>else</code></strong>: Esegue il codice quando la condizione dell'<code>if</code> precedente è falsa.</li>
 <li><strong>Uso di <code>elif</code></strong>: Verifica condizioni multiple in ordine.</li>
 <li><strong>Combinazione di condizioni</strong>: Utilizzo di operatori logici (<code>and</code>, <code>or</code>) per combinare condizioni.</li>
 </ul>
@@ -8509,7 +8552,6 @@ Esempi:
 </ul>
 <h2 id="4.3-While-loop">4.3 While loop<a class="anchor-link" href="#4.3-While-loop">¶</a></h2><ul>
 <li><strong>Uso del ciclo <code>while</code></strong>: Iterazione basata su una condizione che continua finché la condizione è vera.</li>
-<li>Esempio: trovare la prima potenza di due maggiore di 1000.</li>
 </ul>
 <h2 id="4.4-Break-e-Continue">4.4 Break e Continue<a class="anchor-link" href="#4.4-Break-e-Continue">¶</a></h2><ul>
 <li><strong>Uso di <code>break</code></strong>: Interrompere un loop prima che completi tutte le iterazioni.</li>
