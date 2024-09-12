@@ -7650,6 +7650,21 @@ Integrators of ODE systems
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="width:95%; padding:5px 10px 5px; border-style:solid; border-width:0px 0px 0px 10px; border-color:#ff0000; margin:20px 0px 10px 10px">
 <h4> Attenzione!</h4>
+La quasi totalità dei problemi numerici possono essere affrontati con algoritmi diversi, alcuni dei quali richiedono condizioni particolari.
+L'applicabilità del metodo scelto e la correttezza del risultato ottenuto devono essere verificati dall'utente.
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="width:95%; padding:5px 10px 5px; border-style:solid; border-width:0px 0px 0px 10px; border-color:#ff0000; margin:20px 0px 10px 10px">
+<h4> Attenzione!</h4>
     Qualunque manipolazione di una funzione nota deve partire dal grafico che guiderà i passi successivi. Nessun metodo per quanto potente è in grado di prendere sempre le decisioni corrette per una qualsiasi funzione il cui campo di esistenza e range di valori sono in linea di principio l'intero asse reale.<br/>
 <ol>
 <li>Quando si deve calcolare un integrale è opportuno fare il grafico della funzione integranda per controllarne il comportamento. Singolarità (per esempio valori di $x$ in cui $f(x)$ tende a più o meno infinito) oppure altri comportamenti irregolari, come quello di $f(x)=\sin(\frac{1}{x}$) nell'intorno di $x = 0$, sono estremamente difficili e talvolta semplicemente impossibili da trattare numericamente.
@@ -8916,6 +8931,40 @@ Facciamo come prima cosa il grafico della funzione. Il plot suggerisce che i due
 </div>
 </div>
 </div>
-</main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Sommario-10:-Metodi-Numerici-in-Python-(SciPy)">Sommario 10: Metodi Numerici in Python (SciPy)<a class="anchor-link" href="#Sommario-10:-Metodi-Numerici-in-Python-(SciPy)">¶</a></h1><p>La libreria <strong>SciPy</strong>, basata su <strong>NumPy</strong>, fornisce numerosi algoritmi per l'elaborazione scientifica.</p>
+<h2 id="Integrazione-numerica">Integrazione numerica<a class="anchor-link" href="#Integrazione-numerica">¶</a></h2><p><code>scipy.integrate.quad()</code> è la routine base per calcolare integrali definiti in una variabile su intervalli finiti o infiniti.</p>
+<h2 id="Integrazione-con-parametri">Integrazione con parametri<a class="anchor-link" href="#Integrazione-con-parametri">¶</a></h2><p>Le funzioni che dipendono da parametri possono essere integrate passando i parametri come argomenti extra a <code>quad()</code> con la keyword <code>args</code>.</p>
+<h2 id="Metodi-dei-trapezi-e-di-Simpson">Metodi dei trapezi e di Simpson<a class="anchor-link" href="#Metodi-dei-trapezi-e-di-Simpson">¶</a></h2><p>Sono disponibili routines che implementano specifici metodi di integrazione come  il metodo dei trapezi (<code>trapz()</code>) e il metodo di Simpson (<code>simps()</code>).</p>
+<h2 id="Risoluzione-di-Equazioni-Differenziali-Ordinarie-(ODE)">Risoluzione di Equazioni Differenziali Ordinarie (ODE)<a class="anchor-link" href="#Risoluzione-di-Equazioni-Differenziali-Ordinarie-(ODE)">¶</a></h2><p>Le equazioni differenziali ordinarie (ODE) di ordine <code>n</code> possono essere riscritte come un sistema di equazioni differenziali di primo ordine. La libreria <code>scipy</code> fornisce una funzione chiamata <code>odeint</code> per risolvere queste equazioni.</p>
+<h2 id="Ricerca-delle-radici">Ricerca delle radici<a class="anchor-link" href="#Ricerca-delle-radici">¶</a></h2><p>Sono disponibili diversi metodi per la ricerca delle radici di una funzione nel modulo <code>scipy.optimize</code>.</p>
+<h4 id="Metodo-di-Bisezione">Metodo di Bisezione<a class="anchor-link" href="#Metodo-di-Bisezione">¶</a></h4><p>L'algoritmo <code>bisect</code> è robusto e semplice, anche se non molto veloce.  Il metodo richiede che la funzione abbia segni opposti ai due estremi dell'intervallo in cui la radice viene cercata.</p>
+<h4 id="Metodo-fsolve">Metodo <code>fsolve</code><a class="anchor-link" href="#Metodo-fsolve">¶</a></h4><p>Un metodo alternativo, spesso più efficiente, è <code>fsolve</code>. Richiede solo un punto di partenza vicino alla radice attesa e funziona anche con problemi multi-dimensionali.</p>
+<h2 id="Fit-di-un-set-di-dati">Fit di un set di dati<a class="anchor-link" href="#Fit-di-un-set-di-dati">¶</a></h2><p>SciPy fornisce la funzione <code>curve_fit</code> per effettuare il fit di un set di dati basato su un modello ipotizzato. Questo approccio minimizza la somma degli scarti quadratici tra i dati e la curva.</p>
+<h2 id="Ottimizzazione:-trovare-massimi-e-minimi">Ottimizzazione: trovare massimi e minimi<a class="anchor-link" href="#Ottimizzazione:-trovare-massimi-e-minimi">¶</a></h2><p>La routine <code>scipy.optimize.fmin</code> permette di minimizzare una funzione <code>f(x)</code>. Per massimizzare una funzione, è sufficiente minimizzare <code>-f(x)</code>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
 </body>
 </html>

@@ -8520,7 +8520,7 @@ Ciascuno dei comandi successivi si riferirà ad uno specifico oggetto <code>ax</
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Subplots">Subplots<a class="anchor-link" href="#Subplots">¶</a></h3>
+<h3 id="Subplots">Subplots<a class="anchor-link" href="#Subplots">¶</a></h3><p>Il metodo <code>plt.axes</code> permette di creare un nuovo grafico specificando la sua posizione e le sue dimensioni.</p>
 </div>
 </div>
 </div>
@@ -8547,7 +8547,9 @@ Ciascuno dei comandi successivi si riferirà ad uno specifico oggetto <code>ax</
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span><span class="n">yval</span><span class="p">);</span> <span class="c1"># Il ; alla fine del comando plot elimina la stampa della locazione in memoria del plot</span>
 
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span> <span class="c1"># [x_left_lower_corner,y_left_lower_corner,x_width,y_width] in axis coordinates</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span> <span class="c1"># [x_left_lower_corner,y_left_lower_corner,x_width,y_width] </span>
+                                     <span class="c1"># Le coordinate si riferiscono alla intera figura</span>
+                                     <span class="c1"># normalizzate fra 0 e 1</span>
 
 <span class="n">xval2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">yval2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">xval2</span><span class="p">)</span>
@@ -8702,6 +8704,82 @@ La possibilità di fare il grafico di una qualsiasi funzione con pochissima fati
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Informazini addizionali e buoni esempi: <a href="https://www.machinelearningplus.com/plots/matplotlib-tutorial-complete-guide-python-plot-examples/">https://www.machinelearningplus.com/plots/matplotlib-tutorial-complete-guide-python-plot-examples/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Sommario-8:-Grafici-in-Matplotlib">Sommario 8: Grafici in Matplotlib<a class="anchor-link" href="#Sommario-8:-Grafici-in-Matplotlib">¶</a></h1><h2 id="Nozioni-Fondamentali">Nozioni Fondamentali<a class="anchor-link" href="#Nozioni-Fondamentali">¶</a></h2><ul>
+<li>Creazione di un oggetto grafico utilizzando la funzione <code>subplots</code>.</li>
+<li>Differenza tra oggetti <code>Figure</code> e <code>AxesSubplot</code>.</li>
+<li>Configurazione dei parametri come il numero di righe (<code>nrows</code>) e colonne (<code>ncols</code>) per la disposizione dei subplot.</li>
+</ul>
+<h2 id="Grafico-di-una-Lista-di-Numeri">Grafico di una Lista di Numeri<a class="anchor-link" href="#Grafico-di-una-Lista-di-Numeri">¶</a></h2><ul>
+<li>Uso dei metodi <code>plot</code> e <code>scatter</code> per disegnare punti e curve.</li>
+<li>Esempi di creazione di grafici semplici con Matplotlib.</li>
+</ul>
+<h2 id="Titoli,-Nomi-degli-Assi,-Colori-e-Stile-delle-Linee">Titoli, Nomi degli Assi, Colori e Stile delle Linee<a class="anchor-link" href="#Titoli,-Nomi-degli-Assi,-Colori-e-Stile-delle-Linee">¶</a></h2><ul>
+<li>Personalizzazione dei grafici con titoli e etichette per gli assi (<code>set_title</code>, <code>set_xlabel</code>, <code>set_ylabel</code>).</li>
+<li>Uso di marker, colori (<code>color</code>) e stili di linea (<code>linestyle</code>) per differenziare le serie di dati.</li>
+</ul>
+<h2 id="Estremi-degli-Assi">Estremi degli Assi<a class="anchor-link" href="#Estremi-degli-Assi">¶</a></h2><ul>
+<li>Impostazione manuale dei limiti degli assi con <code>set_xlim</code> e <code>set_ylim</code>.</li>
+</ul>
+<h2 id="Griglie-e-Linee-di-Riferimento**">Griglie e Linee di Riferimento**<a class="anchor-link" href="#Griglie-e-Linee-di-Riferimento**">¶</a></h2><ul>
+<li>Aggiunta di griglie ai grafici con <code>grid()</code> per facilitare la lettura.</li>
+<li>Inserimento di linee orizzontali e verticali usando <code>hlines</code> e <code>vlines</code>.</li>
+</ul>
+<h2 id="Grafico-di-Funzioni-Note">Grafico di Funzioni Note<a class="anchor-link" href="#Grafico-di-Funzioni-Note">¶</a></h2><ul>
+<li>Uso di <code>linspace</code> o <code>arange</code> per generare set di valori x.</li>
+<li>Definizione di funzioni personalizzate e loro rappresentazione grafica.</li>
+</ul>
+<h2 id="Plot-Multipli">Plot Multipli<a class="anchor-link" href="#Plot-Multipli">¶</a></h2><ul>
+<li>Rappresentazione di più curve all'interno dello stesso plot.</li>
+<li>Creazione di grafici multipli in una singola figura con l'uso di più oggetti <code>ax</code>.</li>
+</ul>
+<h2 id="Salvare-una-Figura">Salvare una Figura<a class="anchor-link" href="#Salvare-una-Figura">¶</a></h2><ul>
+<li>Salvataggio dei grafici in diversi formati di file (<code>.pdf</code>, <code>.jpg</code>) utilizzando il metodo <code>savefig</code>.</li>
+</ul>
+<h2 id="Plot-Logaritmici">Plot Logaritmici<a class="anchor-link" href="#Plot-Logaritmici">¶</a></h2><ul>
+<li>Introduzione ai grafici con scala logaritmica per rappresentare meglio dati che variano esponenzialmente.</li>
+</ul>
+<h2 id="Altri-elementi-dei-plot">Altri elementi dei plot<a class="anchor-link" href="#Altri-elementi-dei-plot">¶</a></h2><h3 id="Legende">Legende<a class="anchor-link" href="#Legende">¶</a></h3><ul>
+<li>Le legende vengono disegnate invocando il metodo <code>legend()</code></li>
+<li>La legenda di ciascuna curva in un plot viene definita utilizzando il parametro <code>label</code> nella chiamata a <code>plot</code>.</li>
+<li>Curve senza etichetta <code>label</code> non appaiono nella legenda. Se nessuna curva ha un <code>label</code>, si verifica un errore.</li>
+</ul>
+<h3 id="Testo">Testo<a class="anchor-link" href="#Testo">¶</a></h3><ul>
+<li>Si usa <code>plt.text</code></li>
+<li>L'uso del prefisso <code>r</code> prima delle stringhe impedisce l'interpretazione dei caratteri di escape, utile per i comandi LaTeX.</li>
+</ul>
+<h3 id="Subplots">Subplots<a class="anchor-link" href="#Subplots">¶</a></h3><ul>
+<li>Creazione di un subplot all'interno di un grafico principale usando <code>plt.axes()</code> per posizionare un secondo plot.</li>
+</ul>
+<h2 id="Plot-parametrici">Plot parametrici<a class="anchor-link" href="#Plot-parametrici">¶</a></h2><ul>
+<li>Definizione di curve usando parametri invece delle coordinate tradizionali <code>x</code> e <code>y</code>.</li>
+</ul>
+<h2 id="Suggerimento-finale">Suggerimento finale<a class="anchor-link" href="#Suggerimento-finale">¶</a></h2><ul>
+<li>È consigliato fare un grafico preliminare di una funzione prima di procedere con ulteriori manipolazioni per avere una comprensione visiva iniziale del suo comportamento.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>

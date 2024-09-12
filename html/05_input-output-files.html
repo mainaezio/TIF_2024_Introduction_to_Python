@@ -8829,42 +8829,40 @@ This is a third and last line.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Sommario-5:-Input-e-Output">Sommario 5: Input e Output<a class="anchor-link" href="#Sommario-5:-Input-e-Output">¶</a></h1><h2 id="Obiettivi">Obiettivi<a class="anchor-link" href="#Obiettivi">¶</a></h2><ul>
-<li>Imparare a prendere decisioni nei programmi usando le dichiarazioni <code>if-then-else</code>.</li>
-<li>Operare su sequenze usando i cicli <code>for</code> e <code>while</code>.</li>
-<li>Interrompere i loop con <code>break</code> e <code>continue</code>.</li>
-<li>Usare <code>if</code> per selezionare elementi all'interno delle sequenze.</li>
-</ul>
-<h2 id="Contenuti">Contenuti<a class="anchor-link" href="#Contenuti">¶</a></h2><ul>
-<li>Come scrivere sullo schermo</li>
-<li>Come controllare il modo con cui le informazioni sono scritte</li>
-<li>Come leggere e scrivere su file</li>
-</ul>
-<hr>
-<h2 id="5.1-Stampare-sullo-standard-output">5.1 Stampare sullo standard output<a class="anchor-link" href="#5.1-Stampare-sullo-standard-output">¶</a></h2><h3 id="5.1.1-print-semplice">5.1.1 <code>print</code> semplice<a class="anchor-link" href="#5.1.1-print-semplice">¶</a></h3><ul>
+<h1 id="Sommario-5:-Input-e-Output">Sommario 5: Input e Output<a class="anchor-link" href="#Sommario-5:-Input-e-Output">¶</a></h1><h2 id="5.1-Stampare-sullo-standard-output">5.1 Stampare sullo standard output<a class="anchor-link" href="#5.1-Stampare-sullo-standard-output">¶</a></h2><h3 id="print-semplice"><code>print</code> semplice<a class="anchor-link" href="#print-semplice">¶</a></h3><ul>
 <li>La funzione <code>print</code> stampa informazioni sullo standard output, solitamente lo schermo.</li>
 <li>Gli oggetti da stampare sono separati da una virgola e automaticamente separati da uno spazio.</li>
 <li><code>print</code> va a capo alla fine di ogni chiamata, ma questo comportamento può essere modificato usando il parametro <code>end=</code>.</li>
 </ul>
-<h3 id="5.1.2-f-strings">5.1.2 f-strings<a class="anchor-link" href="#5.1.2-f-strings">¶</a></h3><ul>
-<li>Le f-strings sono un metodo recente e semplice per specificare il formato di stampa.</li>
-<li>Si inserisce <code>f</code> prima della stringa, e le variabili con formato sono racchiuse tra parentesi graffe <code>{}</code>.</li>
-<li>Specificatori di formato:<ul>
-<li>{nome_var}:W.DF per i numeri reali ({ }:W.F per gli interi) dove W (width, opzionale) è il numero minimo di caratteri; D (digits, necessaria) è il numero di cifre dopo il punto decimale; F definisce lo stile. Per esempio<ul>
-<li><code>f</code>: punto mobile</li>
-<li><code>e</code>: notazione esponenziale</li>
-<li><code>d</code>: intero</li>
-<li><code>s</code>: stringa</li>
-</ul>
+<h3 id="f-strings">f-strings<a class="anchor-link" href="#f-strings">¶</a></h3><ul>
+<li><p>Le f-strings sono un metodo recente e semplice per specificare il formato di stampa.</p>
 </li>
-</ul>
+<li><p>Si inserisce <code>f</code> prima della stringa, e le variabili con formato sono racchiuse tra parentesi graffe <code>{}</code>.</p>
 </li>
-</ul>
-<h3 id="Allineamento">Allineamento<a class="anchor-link" href="#Allineamento">¶</a></h3><ul>
+<li><p>Specificatori di formato:</p>
+<ul>
+<li><p>{nome_var}:W.DF per i numeri reali ({ }:W.F per gli interi) dove W (width, opzionale) è il numero minimo di caratteri; D (digits, necessaria) è il numero di cifre dopo il punto decimale; F definisce lo stile. Per esempio</p>
+<ul>
+<li><p><code>f</code>: punto mobile</p>
+</li>
+<li><p><code>e</code>: notazione esponenziale</p>
+</li>
+<li><p><code>d</code>: intero</p>
+</li>
+<li><p><code>s</code>: stringa</p>
+</li>
+<li><p>Allineamento</p>
+<ul>
 <li>Allineamento con <code>&gt;</code>, <code>&lt;</code>, <code>^</code> per destra, sinistra e centro.</li>
 <li>Stampa di tabelle con allineamento specifico.</li>
 </ul>
-<h1 id="5.2-Leggere-e-scrivere-file">5.2 Leggere e scrivere file<a class="anchor-link" href="#5.2-Leggere-e-scrivere-file">¶</a></h1><h3 id="Scrittura-su-file">Scrittura su file<a class="anchor-link" href="#Scrittura-su-file">¶</a></h3><ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Scrittura-su-file">Scrittura su file<a class="anchor-link" href="#Scrittura-su-file">¶</a></h3><ol>
 <li>Aprire un file in modalità scrittura con <code>open("nomefile", "w")</code>.</li>
 <li>Usare <code>write()</code> per scrivere nel file.</li>
 <li>Chiudere il file con <code>close()</code>.</li>
@@ -8875,7 +8873,7 @@ This is a third and last line.
 <li>Usare la <code>list comprehension</code> per leggere il contenuto del file una riga alla volta.</li>
 <li>Chiudere il file con <code>close()</code>.</li>
 </ol>
-</hr></div>
+</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
