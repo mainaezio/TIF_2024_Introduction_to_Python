@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>TIF 2023/2024 Introduzione a Linux e alla linea di comando: Esercizi</TITLE>
+<HTML><HEAD><TITLE>TIF 2024/2025 Introduzione a Linux e alla linea di comando: Esercizi</TITLE>
 <META content="text/html; charset=windows-1252" http-equiv=Content-Type>
 <META content="Jupyter notebooks" name=description>
 <META content="MSHTML 5.00.2919.6307" name=GENERATOR></HEAD>
@@ -16,7 +16,7 @@ STYLE="margin:100"
 <TD>
 <FONT SIZE="+4">
     <CENTER>
-    <B>&nbsp;TIF 2023/2024: Introduzione a Linux e alla linea di comando&nbsp;&nbsp;</B><BR>
+    <B>&nbsp;TIF 2024/2025: Introduzione a Linux e alla linea di comando&nbsp;&nbsp;</B><BR>
     &nbsp;<BR>
 </FONT>
 <FONT SIZE="+3">
@@ -36,21 +36,14 @@ Per gli utenti Windows "Aprire un terminale" deve essere inteso come aprire un t
     <LI> Aprite un terminale
     <LI> Date il comando <B>cd</B> per essere sicuri di essere nella vostra cartella home 
     <LI> Verificate con <B>pwd</B> l'indirizzo della cartella home
-    <LI> Verificate con <B>which curl</B> che il programma curl sia installato. Se lo &egrave;,
-        avrete una risposta  simile a /...../bin/curl. In caso contrario la risposta sar&agrave; il solo prompt.
-        In questo caso installate <B>curl</B> dando il comando<BR>
-        <B>sudo apt install curl</B><BR>
-     Vi verr&agrave; richiesta la password.
-    <LI> Date il comando<BR>
-     <B>curl "http://www.to.infn.it/~maina/test_FileSystem/test_FileSystem.tar.gz" --output FS.tar.gz</B>
-     <BR>
-     Il comando curl scarica il file test_FileSystem.tar.gz dal server remoto e lo salva localmente come FS.tar.gz
-    <LI> Verificate con <B>ls -al</B> che il file sia presente nella vostra cartella home
-    <LI> Date il comando<BR>
-     <B>tar ztvf FS.tar.gz</B><BR>
+    <LI> Digitate  in un browser http://www.to.infn.it/~maina/test_FileSystem/
+    <LI> Cliccate con il tasto destro del mouse sul nome del file
+    <LI> Scegliete ''Salva con nome''
+    <LI> Nella directory in cui avete salvato il file, date il comando<BR>
+     <B>tar -ztvf FS.tar.gz</B><BR>
      Il sistema vi mostra i file contenuti nell'archivio FS.tar.gz
     <LI> Date il comando (in cosa differisce dal comando precedente?)<BR>
-     <B>tar zxvf FS.tar.gz</B><BR>
+     <B>tar -zxvf FS.tar.gz</B><BR>
      I file contenuti nell'archivio FS.tar.gz vengono estratti dall'archivio e salvati localmente
     <LI> Verificate con <B>ls -al</B> quali file sia presenti nella vostra cartella home<BR>
         La risposta attesa &egrave;:
@@ -93,12 +86,8 @@ Congratulazioni!<BR>
     <B>&nbsp;Esercizi 2&nbsp;</B></CENTER>
 </FONT>
 </CENTER>
-Questa seconda parte di esrcizi richiede i file e le cartelle scaricate in precedenza.<BR>
-Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutti i file creati dall'utente vengono eliminati alla fine della sessione.) scaricate nuovamente il materiale con i comandi:
-<UL>
-    <LI><B>curl "http://www.to.infn.it/~maina/test_FileSystem/test_FileSystem.tar.gz" --output FS.tar.gz</B>
-    <LI> <B>tar zxvf FS.tar.gz</B> 
-</UL>
+Questa seconda parte di esercizi richiede i file e le cartelle scaricate in precedenza.<BR>
+Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutti i file creati dall'utente vengono eliminati alla fine della sessione.) scaricate nuovamente il materiale con i comandi descritti pi&ugrave; sopra.
 <P>
 &nbsp;
 <P>
