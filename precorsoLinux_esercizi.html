@@ -38,8 +38,11 @@ Per gli utenti Windows "Aprire un terminale" deve essere inteso come aprire un t
     <LI> Verificate con <B>pwd</B> l'indirizzo della cartella home
     <LI> Digitate  in un browser http://www.to.infn.it/~maina/test_FileSystem/
     <LI> Cliccate con il tasto destro del mouse sul nome del file
-    <LI> Scegliete ''Salva con nome''
-    <LI> Nella directory in cui avete salvato il file, date il comando<BR>
+    <LI> Scegliete ''Salva con nome''. Il sistema vi propone una cartella in cui scaricare il file. Prendete nota di dove il file viene scaqricato.
+    <LI> Andate nella cartella home
+    <LI> Create una nuova directory con il comando <B>mkdir precorso</B>
+    <LI> copiate il file FS.tar.gz dalla cartella in cui &egrave; stato scaricato alla cartella precorso. Pu&ograve; essere utile usare indirizzi assoluti.
+    <LI> Nella directory precorso, date il comando<BR>
      <B>tar -ztvf FS.tar.gz</B><BR>
      Il sistema vi mostra i file contenuti nell'archivio FS.tar.gz
     <LI> Date il comando (in cosa differisce dal comando precedente?)<BR>
@@ -78,7 +81,15 @@ Congratulazioni!<BR>
         Come mai non funziona?
     <LI> Usate il comando <B>man</B> per cercare informazioni sul comando <B>rm</B>.
     <LI> Usate il comando <B>rm -rf</B> per eliminare la cartella <B>pippo</B>.
-</UL>
+    <LI> Usate il comando <B>cd /</B> per spostarvi nella cartella base di tutto il filesystem.
+    <LI> Stampate sullo schermo,in formato esteso, l'elenco dei file contenuti nella cartella.
+    <LI> Spostatevi nella directory /usr/bin .
+    <LI> Stampate sullo schermo l'elenco dei file contenuti nella cartella.
+    <LI> Provate a cancellare uno dei file in /usr/bin usando il comando <B>rm</B>. Provate anche <B>rm -f</B>.
+    <LI> Provate a modificare il nome di uno dei file in /usr/bin usando il comando <B>mv</B>.
+    <LI> Spostatevi nella directory /etc .
+    <LI> Date il comando <B>cat shells</B> per vedere sullo schermo il contenuto del file /etc/shells. Che informazione vi fornisce questo file?
+    <LI> usando il comando <B>echo</B> provate ad aggiungere la linea "/bin/mysh" al fondo di shells
 <P>
 &nbsp;
 <P>
@@ -143,7 +154,7 @@ Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutt
         immediato trovare esattamente quello che serve.
     <LI> Il comando <grep> cerca una serie di caratteri all'interno dei file.<BR>
         Dalla vostra cartella home date il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B>.<BR>
-        Il comando mostra tutte le linee nel file <B>phantom/COMANDI_GCC.txt</B> che contengono <B>lhapdf</B>
+        Il comando <B>grep</B> mostra tutte le linee nel file <B>phantom/COMANDI_GCC.txt</B> che contengono <B>lhapdf</B>
     <LI> I comandi di <B>bash</B> possono essere concatenati passando l'output del primo al secondo e cos&igrave;
         via. Per esempio nella vostra home date il comando <B>ls -al</B>. Il risultato pu&ograve; essere passato
          come input a <B>grep</B> per estrarre solo le cartelle per cui la riga contiene "drwx". Si usa il
