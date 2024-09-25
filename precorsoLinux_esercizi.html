@@ -139,9 +139,9 @@ Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutt
     <LI> cancellate la cartella <B>pluto</B> e tutti i file che contiene
     <LI> Tornate alla cartella home
     <LI> Date il comando <B>find ./ -name micro</B><BR>
-        Il comando cerca tutti i file e cartelle il cui nome &egrave; <B>micro</B> (-name micro).
+        Il comando cerca tutti i file e cartelle il cui nome &egrave; <B>micro</B>.
         La ricerca esamina la
-         cartella in cui sono e in tutte le cartelle sottostanti (./ &egrave; la cartella in cui sono)
+         cartella in cui sto lavorando e in tutte le cartelle sottostanti (./ &egrave; la cartella in cui mi trovo)
     <LI> Usate il comando <B>find</B> per cercare il file <B>Makefile</B> nella cartella bin/form
     <LI> &Egrave; possibile fornire a <B>find</B> l'indizzo assoluto della cartella da cui iniziare la ricerca:
         <BR>
@@ -155,8 +155,13 @@ Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutt
         Il web &egrave; una grande risorsa per tutti i problemi di programmazione. Non sempre &egrave;
         immediato trovare esattamente quello che serve.
     <LI> Il comando <grep> cerca una serie di caratteri all'interno dei file.<BR>
+        Dalla vostra cartella home date il comando <B>cat phantom/COMANDI_GCC.txt</B> per mostrare sullo schermo il contenuto
+        del file <B>phantom/COMANDI_GCC.txt</B>.<BR>
         Dalla vostra cartella home date il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B>.<BR>
         Il comando <B>grep</B> mostra tutte le linee nel file <B>phantom/COMANDI_GCC.txt</B> che contengono <B>lhapdf</B>
+    <LI> Usando <B>man grep</B> cercate l'effetto delle opzioni <B>-A</B> e <B>-B</B> su <B>grep</B>.
+         Ripetete il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B> aggiungendo le opzioni <B>-A</B> e <B>-B</B>.
+    <LI> Provate i comandi <B>head</B> e <B>tail</B> su <B>phantom/COMANDI_GCC.txt</B>
     <LI> I comandi di <B>bash</B> possono essere concatenati passando l'output del primo al secondo e cos&igrave;
         via. Per esempio nella vostra home date il comando <B>ls -al</B>. Il risultato pu&ograve; essere passato
          come input a <B>grep</B> per estrarre solo le cartelle per cui la riga contiene "drwx". Si usa il
