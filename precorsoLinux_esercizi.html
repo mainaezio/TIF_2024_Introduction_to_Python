@@ -48,7 +48,7 @@ Per gli utenti Windows "Aprire un terminale" deve essere inteso come aprire un t
     <LI> Date il comando (in cosa differisce dal comando precedente?)<BR>
      <B>tar -zxvf test_FileSystem.tar.gz</B><BR>
      I file contenuti nell'archivio test_FileSystem.tar.gz vengono estratti dall'archivio e salvati localmente
-    <LI> Verificate con <B>ls -al</B> quali file sia presenti nella vostra cartella in cui avete decompresso l'archivio.<BR>
+    <LI> Verificate con <B>ls -al</B> quali file sia presenti nella .<BR>
         La risposta attesa &egrave;:
         <PRE>
 total 99936
@@ -133,11 +133,12 @@ Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutt
         inserire qualunque carattere. Premete <B>Invio</B> per eseguire il nuovo comando. Provate per credere.
     <LI> Date il comando <B>mkdir Humour/pluto</B> per creare la cartella <B>pluto</B> all'interno di
         <B>Humour</B>
-    <LI> Dalla vostra cartella home date il comando <B>cp Humour/Ca* Humour/pluto</B> per copiare tutti i file in
+    <LI> Dalla cartella in cui avete decompresso l'archivio date il comando <B>cp Humour/Ca* Humour/pluto</B>
+        per copiare tutti i file in
         <B>Humour</B> il cui nome inizi con <B>Ca</B> nella cartella <B>Humour</B>. Verificate con <B>ls</B> che
         l'operazione sia andata a buon fine.
     <LI> cancellate la cartella <B>pluto</B> e tutti i file che contiene
-    <LI> Tornate alla cartella home
+    <LI> Tornate alla cartella in cui avete decompresso l'archivio
     <LI> Date il comando <B>find ./ -name micro</B><BR>
         Il comando cerca tutti i file e cartelle il cui nome &egrave; <B>micro</B>.
         La ricerca esamina la
@@ -155,9 +156,9 @@ Se &egrave; necessario (Per esempio sui Thin-client delle aule F e G su cui tutt
         Il web &egrave; una grande risorsa per tutti i problemi di programmazione. Non sempre &egrave;
         immediato trovare esattamente quello che serve.
     <LI> Il comando <grep> cerca una serie di caratteri all'interno dei file.<BR>
-        Dalla vostra cartella home date il comando <B>cat phantom/COMANDI_GCC.txt</B> per mostrare sullo schermo il contenuto
-        del file <B>phantom/COMANDI_GCC.txt</B>.<BR>
-        Dalla vostra cartella home date il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B>.<BR>
+        Dalla cartella in cui avete decompresso l'archivio date il comando <B>cat phantom/COMANDI_GCC.txt</B>
+        per mostrare sullo schermo il contenuto del file <B>phantom/COMANDI_GCC.txt</B>.<BR>
+        Dalla cartella in cui avete decompresso l'archivio date il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B>.<BR>
         Il comando <B>grep</B> mostra tutte le linee nel file <B>phantom/COMANDI_GCC.txt</B> che contengono <B>lhapdf</B>
     <LI> Usando <B>man grep</B> cercate l'effetto delle opzioni <B>-A</B> e <B>-B</B> su <B>grep</B>.
          Ripetete il comando <B>grep lhapdf phantom/COMANDI_GCC.txt</B> aggiungendo le opzioni <B>-A</B> e <B>-B</B>.
