@@ -74,9 +74,9 @@ if __name__ == "__main__":
     V = np.matrix([[1],[2],[3]])
     print("Original vector V:\n" + str(V))
     V1 = Rx(np.pi/2.,V)
-    print("V rotated of pi/2 araund the x-axis: Rx(np.pi/2.,V)\n" + str(V1))
+    print("V rotated of pi/2 around the x-axis: Rx(np.pi/2.,V)\n" + str(V1))
     V2 = Rz(np.pi/4,V)
-    print("V rotated of pi/4 araund the z-axis: Rz(np.pi/4.,V)\n" + str(V2))
+    print("V rotated of pi/4 around the z-axis: Rz(np.pi/4.,V)\n" + str(V2))
 
 
 # In[ ]:
