@@ -8212,7 +8212,7 @@ da <code>*en2_rest</code>. La variabile <code>en2_rest</code> (senza <code>*</co
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Un esempio in cui un gruppo di argomenti con nome viene impacchettato in un dizionario usando **</span>
 <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="c1"># kwargs è un dizionari</span>
+    <span class="c1"># kwargs è un dizionario</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">kwargs</span><span class="p">))</span>
     <span class="c1"># Stampiamo gli elementi del dizionario</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
@@ -8537,19 +8537,19 @@ i valori saranno quelli dell'ultimo dizionario. Un esempio per chiarire:</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Quando la funzione viene chiamata con argomento <code>pippo</code>, le viene passata una referenza all'oggetto <code>pippo</code> che deve essere definito all'esterno della funzione. <code>l</code> diventa sinonimo di <code>pippo</code>. La linea <code>l[i] = l[i] * 2</code> calcola il membro di destra leggendo l'elemento di indice <code>i</code>e poi moltiplicandolo per due. Una referenza a questo nuovo oggetto viene immagazzinata
-nell'oggetto lista <code>l</code> alla posizione di indice <code>i</code>. È stato quindi modificato l'oggestto lista, che è referenziato attraverso il nome <code>l</code>.</p>
+nell'oggetto lista <code>l</code> alla posizione di indice <code>i</code>. È stato quindi modificato l'oggetto lista, che è referenziato attraverso il nome <code>l</code>.</p>
 <p>La referenza all'oggetto lista non cambia mai: la linea <code>l[i] = l[i] * 2</code> cambia l'elemento <code>l[i]</code> della lista <code>l</code> ma non cambia mai la referenza <code>l</code> per la lista. Quindi sia la funzione che il programma che la chiama operano sullo stesso oggetto, rispettivamente attraverso la referenza <code>l</code> e <code>global_l</code>.</p>
 <p>Al contrario, nell'esempio seguente la lista globale non viene modificata
 all'interno della funzione:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">double_the_list</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
@@ -8562,6 +8562,22 @@ all'interno della funzione:</p>
 <span class="n">double_the_list</span><span class="p">(</span><span class="n">l_global</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"In main: s = </span><span class="si">{</span><span class="n">l_global</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>In main: s = Hello
+in double_the_list: l = Hello
+in double_the_list: changed l to l = HelloHello
+In main: s = Hello
+</pre>
 </div>
 </div>
 </div>

@@ -7497,7 +7497,7 @@ a.anchor-link {
 </li></li></li></li></li></li></li></li></li></ul>
 </div>
 <hr/>
-<h2 id="7.1-Introduzione">7.1 Introduzione<a class="anchor-link" href="#7.1-Introduzione">¶</a></h2><p>Il linguaggio Python di base (incluse le librerie standard) fornisce strumenti sufficienti per completare semplici progetti computazionali. Tuttavia, esistono librerie Python dedicate che forniscono funzionalità estese che</p>
+<h2 id="7.1-Introduzione">7.1 Introduzione<a class="anchor-link" href="#7.1-Introduzione">¶</a></h2><p>Il linguaggio Python di base (incluse le librerie standard) fornisce strumenti sufficienti per completare semplici progetti computazionali. Tuttavia, esistono librerie Python dedicate che permettono funzionalità estese che</p>
 <ul>
 <li><p>forniscono strumenti numerici per automatizzare operazioni ricorrenti</p>
 </li>
@@ -7647,7 +7647,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Aggiungere,-inserire,-eliminare-elementi-di-un-array">Aggiungere, inserire, eliminare elementi di un array<a class="anchor-link" href="#Aggiungere,-inserire,-eliminare-elementi-di-un-array">¶</a></h4><p><code>Numpy</code> ha i metodi <code>np.append</code>, <code>np.insert</code>, <code>np.delete</code> che permettono di modificare il numero di elementi di un <code>array</code>. Tutti questi metodi per&amp;ograsve;non agiscono <code>in-place</code> ma creano e ritornano un nuovo <code>array</code>, quindi sono computazionalmente costosi. Per questa ragione è preferibile creare un <code>array</code> con metodo come <code>zeroes</code> e <code>ones</code> e poi modificare i valori.</p>
+<h4 id="Aggiungere,-inserire,-eliminare-elementi-di-un-array">Aggiungere, inserire, eliminare elementi di un array<a class="anchor-link" href="#Aggiungere,-inserire,-eliminare-elementi-di-un-array">¶</a></h4><p><code>Numpy</code> ha i metodi <code>np.append</code>, <code>np.insert</code>, <code>np.delete</code> che permettono di modificare il numero di elementi di un <code>array</code>. Tutti questi metodi però non agiscono <code>in-place</code> ma creano e ritornano un nuovo <code>array</code>, quindi sono computazionalmente costosi. Per questa ragione è preferibile creare un <code>array</code> con metodi come <code>zeroes</code> e <code>ones</code> e poi modificare i valori.</p>
 </div>
 </div>
 </div>
@@ -7658,7 +7658,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="I-comandi-linspace()-e-logspace()">I comandi linspace() e logspace()<a class="anchor-link" href="#I-comandi-linspace()-e-logspace()">¶</a></h4><p>In Numpy esiste il comando <code>linspace(x0, x1, n)</code>, che genera una lista di <code>n</code> elementi equidistanti fra <code>x0</code> e <code>x1</code> (inclusi). Il comando <code>logspace(x0, x1, n)</code> genera una lista di <code>n</code> elementi equidistanti, in scala logaritmica, fra <code>10\*\*x0</code> e <code>10\*\*x1</code>; è utile per fare plot logaritmici come vedremo in 08_plots. Alcuni esempi:</p>
+<h4 id="I-comandi-linspace()-e-logspace()">I comandi linspace() e logspace()<a class="anchor-link" href="#I-comandi-linspace()-e-logspace()">¶</a></h4><p>In Numpy esiste il comando <code>linspace(x0, x1, n)</code>, che genera una lista di <code>n</code> elementi equidistanti fra <code>x0</code> e <code>x1</code> (inclusi). Il comando <code>logspace(x0, x1, n)</code> genera una lista di <code>n</code> elementi equidistanti, in scala logaritmica, fra <code>10**x0</code> e <code>10**x1</code>; è utile per fare plot logaritmici come vedremo in 08_plots. Alcuni esempi:</p>
 </div>
 </div>
 </div>
@@ -7670,7 +7670,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1001</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">101</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8827,8 +8827,10 @@ a.anchor-link {
 <li>Dall'array B = np.cos(np.linspace(0,np.pi,100)) estarre gli elementi di valore compreso fra -0.1 e 0.3.
 <li>Dall'array C = np.arange(-4., 2.,0.3) estrarre gli elementi il cui quadrato sia compreso fra 1 e 4.
 <li>Dall'array D = np.array(['a','b','a','e','e','a']) estrarre gli elementi unici e le corrispondenti molteplicità.
-<li>Estrate gli elementi comuni fra gli array E = np.arange(2.,10.,0.2) e F = np.arange(-1.,7.,0.4).
-</li></li></li></li></li></ol>
+<li>Estraete gli elementi comuni fra gli array E = np.arange(2.,10.,0.2) e F = np.arange(-1.,7.,0.4).
+<li>Estraete gli elementi comuni fra gli array Eint = np.arange(2,100,2) e Fint = np.arange(-10,70,4). Come mai
+    il numero di elementi è diverso dal caso precedente?
+</li></li></li></li></li></li></ol>
 </div>
 </div>
 </div>
