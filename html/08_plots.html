@@ -7620,7 +7620,7 @@ alla variabile <code>ax</code>. Il numero e la disposizione dei subplot è contr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="8.2-Grafico-di-una-lista-di--numeri.-Plot-se-Scatterplots">8.2 Grafico di una lista di  numeri. Plot se Scatterplots<a class="anchor-link" href="#8.2-Grafico-di-una-lista-di--numeri.-Plot-se-Scatterplots">¶</a></h2><p>Ciascuna curva nel grafico si genera con una chiamata al metodo <code>plot</code> applicato all'oggetto di tipo <code>AxesSubplot</code> restituito da <code>subplots</code>. Per disegnare set di punti si usa il metodo <code>scatter</code>. Sia <code>plot</code> che scatter richiedono un set di punti le cui coordinate (x,y) vengono passate in due <code>nd.array</code> oppure due <code>liste</code>. La prima lista contiene le coordinate x, la seconda le coordinate y.</p>
+<h2 id="8.2-Grafico-di-una-lista-di--numeri.-Plot-e-Scatterplots">8.2 Grafico di una lista di  numeri. Plot e Scatterplots<a class="anchor-link" href="#8.2-Grafico-di-una-lista-di--numeri.-Plot-e-Scatterplots">¶</a></h2><p>Ciascuna curva nel grafico si genera con una chiamata al metodo <code>plot</code> applicato all'oggetto di tipo <code>AxesSubplot</code> restituito da <code>subplots</code>. Per disegnare set di punti si usa il metodo <code>scatter</code>. Sia <code>plot</code> che <code>scatter</code> richiedono un set di punti le cui coordinate <code>(x,y)</code> vengono passate in due <code>nd.array</code> oppure due <code>liste</code>. La prima lista contiene le coordinate <code>x</code>, la seconda le coordinate <code>y</code>.</p>
 </div>
 </div>
 </div>
@@ -7677,7 +7677,7 @@ alla variabile <code>ax</code>. Il numero e la disposizione dei subplot è contr
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="8.3-Titoli,-Nomi-degli-assi,-Colori,-LineStyle">8.3 Titoli, Nomi degli assi, Colori, LineStyle<a class="anchor-link" href="#8.3-Titoli,-Nomi-degli-assi,-Colori,-LineStyle">¶</a></h2><p>È possibile marcare i punti utlizzati in <code>plot</code> e <code>scatter</code> con un simbolo.
-<code>marker</code> determina il tipo simbolo usato ('o' corrisponde a pallini). <code>c</code> oppure <code>color</code> determina il colore del simbolo: 'b' significa blue (red: 'r', green: 'g', nero: '0', ). Nel caso di curve, <code>linestyle</code> determina il tipo di linea: per esempio <code>solid</code>, <code>dashed</code>, <code>dotted</code>, <code>dashdotted</code>. Nelle chiamate a <code>plot</code> di default non ci sono marker e i punti sono uniti da linee.<br/>
+<code>marker</code> determina il tipo simbolo usato ('o' corrisponde a pallini). <code>c</code> oppure <code>color</code> determina il colore del simbolo: 'b' significa blue (red: 'r', green: 'g', nero: '0', ). Nel caso di curve, <code>linestyle</code> determina il tipo di linea: per esempio <code>solid</code>, <code>dashed</code>, <code>dotted</code>, <code>dashdot</code>. Nelle chiamate a <code>plot</code> di default non ci sono marker e i punti sono uniti da linee.<br/>
 I metodi <code>set_title</code>, <code>set_xlabel</code>, <code>set_ylabel</code> assegnano titoli al plot, all'asse delle ordinate, all'asse delle ascisse.</p>
 </div>
 </div>
@@ -7725,7 +7725,7 @@ I metodi <code>set_title</code>, <code>set_xlabel</code>, <code>set_ylabel</code
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Estremi-degli-assi">Estremi degli assi<a class="anchor-link" href="#Estremi-degli-assi">¶</a></h3><p>Di default, Matplotlib sceglie gli estremi degli assi in modo che tutti i punti che vengono passati al comando <code>plot</code> o <code>scatterplot</code> siano visibili nel grafico. L'utente può però fissare gli estremi con <code>set_xlim</code>, <code>set_ylim</code>.</p>
+<h3 id="Estremi-degli-assi">Estremi degli assi<a class="anchor-link" href="#Estremi-degli-assi">¶</a></h3><p>Di default, Matplotlib sceglie gli estremi degli assi in modo che tutti i punti che vengono passati al comando <code>plot</code> o <code>scatterplot</code> siano visibili nel grafico. L'utente può però fissare gli estremi degli assi con <code>set_xlim</code>, <code>set_ylim</code>. I punti che non rientrano nei range definiti da <code>set_xlim</code>, <code>set_ylim</code> non vengono mostrati.</p>
 </div>
 </div>
 </div>
@@ -8545,7 +8545,7 @@ Ciascuno dei comandi successivi si riferirà ad uno specifico oggetto <code>ax</
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Plot of my_f'</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span><span class="n">yval</span><span class="p">);</span> <span class="c1"># Il ; alla fine del comando plot elimina la stampa della locazione in memoria del plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xval</span><span class="p">,</span><span class="n">yval</span><span class="p">);</span>
 
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span> <span class="c1"># [x_left_lower_corner,y_left_lower_corner,x_width,y_width] </span>
                                      <span class="c1"># Le coordinate si riferiscono alla intera figura</span>
@@ -8716,11 +8716,11 @@ La possibilità di fare il grafico di una qualsiasi funzione con pochissima fati
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Sommario-8:-Grafici-in-Matplotlib">Sommario 8: Grafici in Matplotlib<a class="anchor-link" href="#Sommario-8:-Grafici-in-Matplotlib">¶</a></h1><h2 id="Nozioni-Fondamentali">Nozioni Fondamentali<a class="anchor-link" href="#Nozioni-Fondamentali">¶</a></h2><ul>
 <li>Creazione di un oggetto grafico utilizzando la funzione <code>subplots</code>.</li>
-<li>Differenza tra oggetti <code>Figure</code> e <code>AxesSubplot</code>.</li>
+<li>Gli oggetti <code>Figure</code> e <code>AxesSubplot</code>.</li>
 <li>Configurazione dei parametri come il numero di righe (<code>nrows</code>) e colonne (<code>ncols</code>) per la disposizione dei subplot.</li>
 </ul>
 <h2 id="Grafico-di-una-Lista-di-Numeri">Grafico di una Lista di Numeri<a class="anchor-link" href="#Grafico-di-una-Lista-di-Numeri">¶</a></h2><ul>
-<li>Uso dei metodi <code>plot</code> e <code>scatter</code> per disegnare punti e curve.</li>
+<li>Uso dei metodi <code>plot</code> e <code>scatter</code> per disegnare curve e punti.</li>
 <li>Esempi di creazione di grafici semplici con Matplotlib.</li>
 </ul>
 <h2 id="Titoli,-Nomi-degli-Assi,-Colori-e-Stile-delle-Linee">Titoli, Nomi degli Assi, Colori e Stile delle Linee<a class="anchor-link" href="#Titoli,-Nomi-degli-Assi,-Colori-e-Stile-delle-Linee">¶</a></h2><ul>
